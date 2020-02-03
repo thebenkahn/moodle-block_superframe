@@ -6,3 +6,5 @@
  See: https://www.moodlebites.com/mod/page/view.php?id=24546
 
  Cloned from newblock.
+
+ Additional changes made by Benjamin Kahn.
