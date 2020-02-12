@@ -46,6 +46,7 @@ $attributes = ['src' => $config->url,
 echo html_writer::start_tag('iframe', $attributes);
 echo html_writer::end_tag('iframe');
 
+// Just testing to see if $config properties have values
 echo $config->url . '& ' . $config->width;
 
 //send footer out to browser
