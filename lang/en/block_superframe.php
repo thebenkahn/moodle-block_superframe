@@ -39,3 +39,13 @@ $string['viewlink'] = 'View the page';
 // Capability strings
 $string['superframe:addinstance'] = 'Add a new Super frame block';
 $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle';
+
+// Admin settings strings.
+$string['url'] = 'url';
+$string['url_details'] = 'URL of iFrame to embed';
+$string['height'] = 'Height';
+$string['height_details'] = 'Height in pixels';
+$string['width'] = 'Width';
+$string['width_details'] = 'Width in pixels';
+$string['pagelayout'] = 'Layout';
+$string['pagelayout_details'] = 'Choose a layout for the iFrame page.';
