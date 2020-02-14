@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 require('../../config.php');
-$config = get_config($block_superframe);
+$config = get_config('block_superframe');
 $PAGE->set_course($COURSE);
 $PAGE->set_url('/blocks/superframe/view.php');
 $PAGE->set_heading($SITE->fullname);
