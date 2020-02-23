@@ -59,7 +59,7 @@ $capabilities = array(
      // Restrict access to view page.
     'block/superframe:seeviewpage' => array(
         'captype' => 'read',
-        'contextlevel' => CONTEXT_USER,
+        'contextlevel' => CONTEXT_BLOCK,
         'archetypes' => array(
             'editingteacher' => CAP_ALLOW,
             'manager' => CAP_ALLOW,
