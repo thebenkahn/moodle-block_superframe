@@ -70,20 +70,10 @@ switch ($config->size) {
     break;
 }
 
-// Start output to browser.
-echo $OUTPUT->header();
-echo $OUTPUT->heading(get_string('pluginname', 'block_superframe'), 5);
+//Get the user info to pass to the renderer
+$username = fullname($USER);
+$userpic = new user_picture($USER);
 
-$userpic1 = new user_picture($USER);
-echo $OUTPUT->render($userpic1);
-echo '<br>' . fullname($USER) . '<br>';
-
-// Build and display an iframe.
-$attributes = ['src' => $url,
-               'width' => $width,
-               'height' => $height];
-echo html_writer::start_tag('iframe', $attributes);
-echo html_writer::end_tag('iframe');
-
-//send footer out to browser
-echo $OUTPUT->footer();
+// Display content via a renderer
+$renderer = $PAGE->get_renderer('block_superframe');
+$renderer->display_view_page($url, $width, $height, $username, $userpic);
