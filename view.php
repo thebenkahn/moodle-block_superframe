@@ -23,6 +23,7 @@
  */
 require('../../config.php');
 $blockid = required_param('blockid', PARAM_INT);
+$courseid = required_param('courseid', PARAM_INT);
 $def_config = get_config('block_superframe');
 $PAGE->set_course($COURSE);
 $PAGE->set_url('/blocks/superframe/view.php');
@@ -72,8 +73,7 @@ switch ($config->size) {
 
 //Get the user info to pass to the renderer
 $username = fullname($USER);
-$userpic = new user_picture($USER);
 
 // Display content via a renderer
 $renderer = $PAGE->get_renderer('block_superframe');
-$renderer->display_view_page($url, $width, $height, $username, $userpic);
+$renderer->display_view_page($url, $width, $height, $username, $courseid);

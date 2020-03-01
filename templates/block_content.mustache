@@ -16,11 +16,11 @@
 }}
 
 {{!
-    @template block_superframe/frame
+    @template block_superframe/block_content
 
     This template renders a url in an iframe of given size.
 
-    Example context (json):
+    **TODO** rewrite content Example context (json):
     {
         "heading": "My superframe",
         "url": "http://www.moodlebites.com",
@@ -28,14 +28,7 @@
         "width": "600"
     }
 }}
-<div  class="container">
-    
-    <h5>{{heading}}</h5>
-    <p>{{username}}</p>
-    
-    <div class="jumbotron">
-            <iframe src="{{url}}" height="{{height}}" width="{{width}}">
-            </iframe>
-            <p><a href="{{{backtocourselink}}}">{{backtocourselinktext}}</a></p>
-    </div>
+<div>
+    <h3>{{welcome}}</h3>
+    <a href="{{{url}}}">{{text}}</a>
 </div>

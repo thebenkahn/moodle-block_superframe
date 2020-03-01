@@ -24,7 +24,7 @@
 
 class block_superframe_renderer extends plugin_renderer_base {
 
-    function display_view_page($url, $width, $height, $username, $userpic) {
+    function display_view_page($url, $width, $height, $username, $courseid) {
    
            $data = new stdClass();
    
@@ -35,6 +35,9 @@ class block_superframe_renderer extends plugin_renderer_base {
            $data->width = $width;
            $data->username = $username;
            $data->userpic = $userpic;
+           // Create the return to course link
+           $data->backtocourselink = new moodle_url('/course/view.php', ['id' => $courseid]);
+           $data->backtocourselinktext = get_string('backtocourse', 'block_superframe');
    
            // Start output to browser.
            echo $this->output->header();
@@ -45,4 +48,19 @@ class block_superframe_renderer extends plugin_renderer_base {
            // Finish the page.
            echo $this->output->footer();
        }
-   }
+
+    public function fetch_block_content($blockid, $courseid) {
+        global $USER;
+        $data = new stdClass();
+        $data->welcome =
+                get_string('welcomeuser', 'block_superframe', $USER);
+
+        $data->url = new moodle_url('/blocks/superframe/view.php', ['blockid' => $blockid,
+            'courseid' => $courseid]);
+        $data->text = get_string('viewlink', 'block_superframe');
+
+        return $this->render_from_template('block_superframe/block_content',
+                $data);
+    }
+
+}
