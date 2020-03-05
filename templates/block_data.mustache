@@ -1,0 +1,22 @@
+<div class = "table-responsive">
+    <table class = "table table-striped">
+        {{! Using a get_string helper }}
+        <caption>
+            {{# str }} tablecaption, block_superframe {{/ str }}
+        </caption>
+        <thead>
+            {{#tableheaders}}
+                <th>{{.}}</th>
+            {{/tableheaders}}
+        </thead>
+        <tbody>
+            {{#tabledata}}
+                <tr>
+                    {{#.}}
+                        <td>{{.}}</td>
+                    {{/.}}
+                </tr>
+            {{/tabledata}}
+        </tbody>
+    </table>
+</div>

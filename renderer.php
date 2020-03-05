@@ -59,8 +59,45 @@ class block_superframe_renderer extends plugin_renderer_base {
             'courseid' => $courseid]);
         $data->text = get_string('viewlink', 'block_superframe');
 
+        // Add a link to the popup page.
+        $data->popurl = new moodle_url('blocks/superframe/block_data.php');
+        $data->poptext = get_string('poplink', 'block_superframe');
+
         return $this->render_from_template('block_superframe/block_content',
                 $data);
+    }
+
+    /**
+     * Function to display a table of records
+     * @param array the records to display.
+     * @return none.
+     */
+    public function display_block_table($records) {
+        // Prepare the data for the template.
+        $table = new stdClass();
+        // Table headers.
+        $table->tableheaders = [
+                get_string('blockid', 'block_superframe'),
+                get_string('blockname', 'block_superframe'),
+                get_string('course', 'block_superframe'),
+                get_string('catname', 'block_superframe'),
+        ];
+        // Build the data rows.
+        foreach ($records as $record) {
+            $data = array();
+            $data[] = $record->id;
+            $data[] = $record->blockname;
+            $data[] = $record->shortname;
+            $data[] = $record->catname;
+            $table->tabledata[] = $data;
+        }
+        // Start output to browser.
+        echo $this->output->header();
+        // Call our template to render the data.
+        echo $this->render_from_template(
+                'block_superframe/block_table', $table);
+        // Finish the page.
+        echo $this->output->footer();
     }
 
 }
