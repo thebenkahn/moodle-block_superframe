@@ -37,6 +37,7 @@ $string['message'] = 'Hello world. I am going to be a Moodle developer and use r
 $string['viewlink'] = 'View the page';
 $string['backtocourse'] = 'Return to the main course page';
 $string['poplink'] = 'See all block instances';
+$string['tabletext'] = 'Manage all course names';
 
 // Capability strings
 $string['superframe:addinstance'] = 'Add a new Super frame block';
@@ -58,3 +59,9 @@ $string['custom'] = 'Custom';
 $string['small'] = 'Small';
 $string['medium'] = 'Medium';
 $string['large'] = 'Large';
+// Block Data report strings
+$string['blockid'] = 'Block ID';
+$string['blockname'] = 'Block name';
+$string['course'] = 'Course name';
+$string['catname'] = 'Category name';
+$string['tablecaption'] = 'Site block instances';
