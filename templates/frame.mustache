@@ -34,8 +34,9 @@
     <p>{{username}}</p>
     
     <div class="jumbotron">
-            <iframe src="{{url}}" height="{{height}}" width="{{width}}">
-            </iframe>
-            <p><a href="{{{backtocourselink}}}">{{backtocourselinktext}}</a></p>
+            {{> block_superframe/links}}
+        <iframe src="{{url}}" height="{{height}}" width="{{width}}">
+        </iframe>
+        <p><a href="{{{backtocourselink}}}">{{backtocourselinktext}}</a></p>
     </div>
 </div>

@@ -55,10 +55,10 @@ $string['pagelayout'] = 'Layout';
 $string['pagelayout_details'] = 'Choose a layout for the iFrame page.';
 // Edit form strings
 $string['size'] = 'Select a size for your iframe';
-$string['custom'] = 'Custom';
-$string['small'] = 'Small';
-$string['medium'] = 'Medium';
-$string['large'] = 'Large';
+$string['custom'] = 'custom';
+$string['small'] = 'small';
+$string['medium'] = 'medium';
+$string['large'] = 'large';
 // Block Data report strings
 $string['blockid'] = 'Block ID';
 $string['blockname'] = 'Block name';
