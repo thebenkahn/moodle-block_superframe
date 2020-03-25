@@ -60,19 +60,19 @@ if ($size == 'none') {
 $url = $config->url;
 // Let's set up the iframe attributes
 switch ($size) {
-    case 'custom':
+    case 'Custom':
         $width = $def_config->width;
         $height = $def_config->height;
     break;
-    case 'small':
+    case 'Small':
         $width = 360;
         $height = 240;
     break;
-    case 'medium':
+    case 'Medium':
         $width = 600;
         $height = 400;
     break;
-    case 'large':
+    case 'Large':
         $width = 1024;
         $height = 720;
     break;
@@ -83,4 +83,4 @@ $username = fullname($USER);
 
 // Display content via a renderer
 $renderer = $PAGE->get_renderer('block_superframe');
-$renderer->display_view_page($url, $width, $height, $username, $courseid, $blockid);
+$renderer->display_view_page($url, $width, $height, $courseid, $blockid);

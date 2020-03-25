@@ -65,3 +65,5 @@ $string['blockname'] = 'Block name';
 $string['course'] = 'Course name';
 $string['catname'] = 'Category name';
 $string['tablecaption'] = 'Site block instances';
+// Navigation API.
+$string['userlink'] = 'Installed blocks';
