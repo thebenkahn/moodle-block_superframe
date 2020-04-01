@@ -32,7 +32,7 @@
 
 // General
 $string['pluginname'] = 'Super frame';
-$string['welcomeuser'] = 'Welcome {$a->firstname} {$a->lastname}';
+$string['welcomeuser'] = 'Welcome';
 $string['message'] = 'Hello world. I am going to be a Moodle developer and use remote SSH to develop in the cloud! I\'ll also use Linux.';
 $string['viewlink'] = 'View the page';
 $string['backtocourse'] = 'Return to the main course page';
@@ -67,3 +67,5 @@ $string['catname'] = 'Category name';
 $string['tablecaption'] = 'Site block instances';
 // Navigation API.
 $string['userlink'] = 'Installed blocks';
+// Modal JS
+$string['about'] = 'this is what i\'m talking about.';

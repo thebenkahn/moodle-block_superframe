@@ -28,6 +28,7 @@ class block_superframe_renderer extends plugin_renderer_base {
         global $USER;
            
         $data = new stdClass();
+        $this->page->requires->js_call_amd('block_superframe/amd_modal', 'init');
 
         // User name (from an earlier optional exercise)
         $data->name = fullname($USER);
@@ -42,6 +43,8 @@ class block_superframe_renderer extends plugin_renderer_base {
         // Create the return to course link
         $data->backtocourselink = new moodle_url('/course/view.php', ['id' => $courseid]);
         $data->backtocourselinktext = get_string('backtocourse', 'block_superframe');
+        $data->modallinktext = get_string('about', 'block_superframe');
+
 
         // Text for the links and the size parameter.
         $strings = array();
@@ -75,6 +78,11 @@ class block_superframe_renderer extends plugin_renderer_base {
     public function fetch_block_content($blockid, $courseid) {
         global $USER;
         $data = new stdClass();
+        $name = $USER->firstname . ' ' . $USER->lastname;
+        $this->page->requires->js_call_amd('block_superframe/test_amd', 'init', ['name' => $name]);
+        $data->headingclass = 'block_superframe_heading';
+        $data->welcome = get_string('welcomeuser', 'block_superframe', $name);
+        
         $data->welcome =
                 get_string('welcomeuser', 'block_superframe', $USER);
 
