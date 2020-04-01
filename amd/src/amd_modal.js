@@ -10,4 +10,3 @@ define(['jquery', 'core/modal_factory'], function($, ModalFactory) {
       modal.close();
     });
   });
-  
