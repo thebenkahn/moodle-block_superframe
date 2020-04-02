@@ -38,6 +38,7 @@ $string['viewlink'] = 'View the page';
 $string['backtocourse'] = 'Return to the main course page';
 $string['poplink'] = 'See all block instances';
 $string['tabletext'] = 'Manage all course names';
+$string['lastaccess'] = 'Last user access:';
 
 // Capability strings
 $string['superframe:addinstance'] = 'Add a new Super frame block';
